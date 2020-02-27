@@ -1,0 +1,12 @@
+**/target/
+**/nb-configuration.xml
+
+/nbproject/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+.idea
+*.iml
