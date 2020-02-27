@@ -1,6 +1,7 @@
-package dto;
+package dto.person;
 
 
+import dto.address.AddressDTO;
 import entities.Address;
 import entities.Person;
 import lombok.AllArgsConstructor;
@@ -20,14 +21,14 @@ public class PersonDTO {
     private String lastName;
     private String phone;
     private Date created;
-    private Address address;
+    private AddressDTO address;
 
     public PersonDTO(Person person) {
         this.id = person.getId();
         this.firstName = person.getFirstName();
         this.lastName = person.getLastName();
         this.phone = person.getPhone();
-        this.address = person.getAddress();
+        this.address = new AddressDTO(person.getAddress());
     }
 
     public PersonDTO(Long id, String firstName, String lastName, String phone) {

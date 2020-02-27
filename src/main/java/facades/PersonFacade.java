@@ -4,18 +4,16 @@ package facades;
  * version 1.0
  */
 
-import dto.PersonDTO;
-import dto.PersonListDTO;
+import dto.person.PersonDTO;
+import dto.person.PersonListDTO;
+import entities.Address;
 import entities.Person;
 import exceptions.PersonNotFoundException;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
 
 
 public class PersonFacade {

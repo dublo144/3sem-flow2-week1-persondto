@@ -2,7 +2,7 @@ package exceptions;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dto.ExceptionDTO;
+import dto.exception.ExceptionDTO;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

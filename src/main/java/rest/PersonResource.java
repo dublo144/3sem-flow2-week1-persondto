@@ -7,10 +7,9 @@ package rest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import dto.PersonDTO;
+import dto.person.PersonDTO;
 import entities.Person;
 import exceptions.PersonNotFoundException;
-import facades.FacadeExample;
 import facades.PersonFacade;
 import utils.EMF_Creator;
 
@@ -51,6 +50,9 @@ public class PersonResource {
     public Response addPersons (String json) {
         Type listType = new TypeToken<ArrayList<Person>>(){}.getType();
         List<Person> personList = GSON.fromJson(json, listType);
+        personList.forEach(person -> {
+            person.getAddress().setPerson(person);
+        });
         return Response
                 .ok()
                 .entity(GSON.toJson(FACADE.addPerson(personList)))

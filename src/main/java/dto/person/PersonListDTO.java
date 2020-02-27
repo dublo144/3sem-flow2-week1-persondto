@@ -1,4 +1,4 @@
-package dto;
+package dto.person;
 
 import entities.Person;
 import lombok.Getter;

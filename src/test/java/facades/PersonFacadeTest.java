@@ -4,8 +4,7 @@ package facades;
  * version 1.0
  */
 
-import dto.PersonDTO;
-import dto.PersonListDTO;
+import dto.person.PersonDTO;
 import entities.Person;
 import exceptions.PersonNotFoundException;
 import utils.EMF_Creator;
