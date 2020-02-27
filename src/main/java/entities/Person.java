@@ -35,6 +35,10 @@ public class Person implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date lastEdited;
 
+    @OneToOne(mappedBy = "person", cascade = CascadeType.PERSIST,
+            fetch = FetchType.LAZY, optional = false)
+    private Address address;
+
     public Person(String firstName, String lastName, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;

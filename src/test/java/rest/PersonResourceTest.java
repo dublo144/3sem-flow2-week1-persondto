@@ -112,7 +112,6 @@ public class PersonResourceTest {
                 .body("all.firstName", contains("Test"));
     }
 
-    @Disabled // TODO
     @Test
     public void testGetPersonByid() {
         Long id = p1.getId();

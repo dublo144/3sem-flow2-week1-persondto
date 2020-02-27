@@ -81,7 +81,7 @@ public class PersonFacadeTest {
     @Test
     public void testGetAllPersons () {
         int expectedSize = 2;
-        int actualSize = personfacade.getAll().size();
+        int actualSize = personfacade.getAll().getAll().size();
         assertEquals(expectedSize, actualSize);
     }
 

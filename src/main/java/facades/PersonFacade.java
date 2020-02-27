@@ -64,14 +64,10 @@ public class PersonFacade {
         return new PersonDTO(person.getId(), person.getFirstName(), person.getLastName(), person.getPhone());
     }
 
-    public List<PersonDTO> getAll() {
+    public PersonListDTO getAll() {
         EntityManager em = getEntityManager();
-        List<PersonDTO> personDTOS = new ArrayList<>();
         List<Person> personList = em.createQuery("SELECT P FROM Person p", Person.class).getResultList();
-        personList.forEach(person -> {
-            personDTOS.add(new PersonDTO(person.getId(), person.getFirstName(), person.getLastName(), person.getPhone()));
-        });
-        return personDTOS;
+        return new PersonListDTO(personList);
     }
 
     public PersonDTO editPerson(PersonDTO personDTO) throws PersonNotFoundException {
