@@ -35,8 +35,8 @@ public class Person implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date lastEdited;
 
-    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "address_id")
     private Address address;
 
     public Person(String firstName, String lastName, String phone) {

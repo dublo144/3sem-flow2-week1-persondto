@@ -29,7 +29,7 @@ public class PersonResource {
             "jdbc:mysql://localhost:3307/f2w1_wednesday",
             "dev",
             "ax2",
-            EMF_Creator.Strategy.CREATE);
+            EMF_Creator.Strategy.DROP_AND_CREATE);
 
     private static final PersonFacade FACADE =  PersonFacade.getPersonFacade(EMF);
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();

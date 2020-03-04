@@ -28,7 +28,7 @@ public class Address implements Serializable {
     private String zip;
     private String city;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "person_fk")
+    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
     private Person person;
 }
